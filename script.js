@@ -9,34 +9,34 @@ document.getElementById("export").addEventListener("click", async () => {
     });
     const imgData = canvas.toDataURL("image/png");
 
-    // A4 용지 크기 (mm)
-    const pdfWidth = 210; // A4 width in mm
-    const pdfHeight = 297; // A4 height in mm
+    // A4 용지 크기 (mm) - 가로 방향
+    const pdfWidth = 297; // A4 width in mm (landscape)
+    const pdfHeight = 210; // A4 height in mm (landscape)
 
     // 캔버스와 PDF 페이지 크기 설정
     const imgWidth = pdfWidth;
     const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-    const pageHeight = pdfHeight;
-    let position = 0;
-
-    // PDF 생성
     const pdf = new jsPDF({
-      orientation: "p", // 'p' for portrait, 'l' for landscape
+      orientation: "l", // 'l' for landscape
       unit: "mm",
       format: [pdfWidth, pdfHeight],
     });
 
+    // 페이지 크기에 맞춰 이미지를 나누어 저장
+    let position = 0;
+    let heightLeft = imgHeight;
+
     // 첫 페이지 추가
-    pdf.addImage(imgData, "PNG", 0, position, imgWidth, pageHeight);
-    let heightLeft = imgHeight - pageHeight;
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, pdfHeight);
+    heightLeft -= pdfHeight;
 
     // 페이지가 넘어갈 경우
     while (heightLeft > 0) {
-      position = heightLeft - pageHeight;
+      position = heightLeft - pdfHeight;
       pdf.addPage();
-      pdf.addImage(imgData, "PNG", 0, position, imgWidth, pageHeight);
-      heightLeft -= pageHeight;
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, pdfHeight);
+      heightLeft -= pdfHeight;
     }
 
     // PDF 저장
