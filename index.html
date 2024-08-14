@@ -11,12 +11,85 @@
      </head>
      <body>
           <div class="wrap" id="exportDoc">
-               <div class="g-header">
-                    <button type="button" id="export" class="bw_btn medium primary">내보내기</button>
+               <div class="g-header-wrap">
+                    <div class="g-header">
+                         <div class="logo">
+                              <h1>UI가이드</h1>
+                         </div>
+                         <button type="button" id="export" class="bw_btn medium primary">내보내기</button>
+                    </div>
+                    
                </div>
+               <!-- 유닛 -->
+               <section class="g-section">
+                    <div class="title02">
+                         <h2>unit</h2>
+                    </div>
+                    <div class="g-element-spacing">
+                         <ul class="g-ex">
+                              <li class="spacing spacing-4">4</li>
+                              <li class="spacing spacing-8">8</li>
+                              <li class="spacing spacing-12">12</li>
+                              <li class="spacing spacing-16">16</li>
+                              <li class="spacing spacing-20">20</li>
+                              <li class="spacing spacing-24">24</li>
+                              <li class="spacing spacing-28">28</li>
+                              <li class="spacing spacing-32">32</li>
+                              <li class="spacing spacing-36">36</li>
+                              <li class="spacing spacing-40">40</li>
+                              <li class="spacing spacing-44">44</li>
+                         </ul>
+                    </div>
+               </section>
                <!-- 레이아웃 -->
                 <section class="g-section">
+                    <div class="title02">
+                         <h2>레이아웃</h2>
+                    </div>
                     <iframe src="sample/layout.html" width="1280" height="640" frameborder="0"></iframe>
+                    <div class="g-element-layout">
+                         <table>
+                              <colgroup>
+                                   <col>
+                                   <col width="25%">
+                                   <col width="25%">
+                                   <col width="25%">
+                              </colgroup>
+                              <thead>
+                                   <th></th>
+                                   <th>width</th>
+                                   <th>height</th>
+                                   <th>padding</th>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                        <th>헤더</th>
+                                        <td>100%</td>
+                                        <td>50px</td>
+                                        <td>0 40px</td>
+                                   </tr>
+                                   <tr>
+                                        <th>사이드바</th>
+                                        <td>288px</td>
+                                        <td>100%</td>
+                                        <td>16px 0</td>
+                                   </tr>
+                                   <tr>
+                                        <th>페이지</th>
+                                        <td>100% - 288px</td>
+                                        <td>100vh - 헤더 - 사이트 경로</td>
+                                        <td>0 16px</td>
+                                   </tr>
+                                   <tr>
+                                        <th>페이지 - 사이트 경로</th>
+                                        <td>100%</td>
+                                        <td>38px</td>
+                                        <td>24px 40px</td>
+                                   </tr>
+
+                              </tbody>
+                         </table>
+                    </div>
                 </section>
                <!-- font -->
                <section class="g-section">
@@ -86,203 +159,203 @@
                          <h2>컬러</h2>
                     </div>
                     <div class="g-element-color">
-                         <div class="palette-name"><span>기본</span></div>
-                    <ul>
-                         <li class="chip black"><span>black</span></li>
-                         <li class="chip white"><span>white</span></li>
-                    </ul>
+                         <div class="palette">
+                              <div class="palette-name"><span>팔레트-라이트</span></div>
+                              <ul>
+                                   <li class="chip red-light"><span>red-light</span></li>
+                                   <li class="chip orange-light"><span>orange-light</span></li>
+                                   <li class="chip yellow-light"><span>yellow-light</span></li>
+                                   <li class="chip green-light"><span>green-light</span></li>
+                                   <li class="chip blue-light"><span>blue-light</span></li>
+                                   <!-- <li class="chip navy"><span>navy</span></li> -->
+                                   <li class="chip purple-light"><span>purple-light</span></li>
+                              </ul>
+                         </div>
+                         
+                         <div class="palette">
+                              <div class="palette-name"><span>팔레트</span></div>
+                              <ul>
+                                   <li class="chip red"><span>red</span></li>
+                                   <li class="chip orange"><span>orange</span></li>
+                                   <li class="chip yellow"><span>yellow</span></li>
+                                   <li class="chip green"><span>green</span></li>
+                                   <li class="chip blue"><span>blue</span></li>
+                                   <!-- <li class="chip navy"><span>navy</span></li> -->
+                                   <li class="chip purple"><span>purple</span></li>
+                              </ul>
+                         </div>
+                         
+                         <div class="palette">
+                              <div class="palette-name"><span>팔레트-다크</span></div>
+                              <ul>
+                                   <li class="chip red-dark"><span>red-dark</span></li>
+                                   <li class="chip orange-dark"><span>orange-dark</span></li>
+                                   <li class="chip yellow-dark"><span>yellow-dark</span></li>
+                                   <li class="chip green-dark"><span>green-dark</span></li>
+                                   <li class="chip blue-dark"><span>blue-dark</span></li>
+                                   <!-- <li class="chip navy"><span>navy</span></li> -->
+                                   <li class="chip purple-dark"><span>purple-dark</span></li>
+                              </ul>
+                         </div>
                     </div>
                     <div class="g-element-color">
-                    <div class="palette-name"><span>팔레트-라이트</span></div>
-                    <ul>
-                    <li class="chip red-light"><span>red-light</span></li>
-                    <li class="chip orange-light"><span>orange-light</span></li>
-                    <li class="chip yellow-light"><span>yellow-light</span></li>
-                    <li class="chip green-light"><span>green-light</span></li>
-                    <li class="chip blue-light"><span>blue-light</span></li>
-                    <!-- <li class="chip navy"><span>navy</span></li> -->
-                    <li class="chip purple-light"><span>purple-light</span></li>
-                    </ul>
+                         <div class="palette">
+                              <div class="palette-name"><span>기본</span></div>
+                              <ul>
+                                   <li class="chip black"><span>black</span></li>
+                                   <li class="chip white"><span>white</span></li>
+                                   <li class="chip brand"><span>brand</span></li>
+                              </ul>
+                         </div>
                     </div>
+                    <div class="g-element-color">
+                         <div class="palette">
+                              <div class="palette-name"><span>브랜드 라이트</span></div>
+                              <ul>
+                                   <li class="chip brand-light-980"><span>brand-light</span><span>-980</span></li>
+                                   <li class="chip brand-light-900"><span>brand-light</span><span>-900</span></li>
+                                   <li class="chip brand-light-800"><span>brand-light</span><span>-800</span></li>
+                                   <li class="chip brand-light-700"><span>brand-light</span><span>-700</span></li>
+                                   <li class="chip brand-light-600"><span>brand-light</span><span>-600</span></li>
+                                   <li class="chip brand-light-500"><span>brand-light</span><span>-500</span></li>
+                                   <li class="chip brand-light-400"><span>brand-light</span><span>-400</span></li>
+                                   <li class="chip brand-light-300"><span>brand-light</span><span>-300</span></li>
+                                   <li class="chip brand-light-200"><span>brand-light</span><span>-200</span></li>
+                                   <li class="chip brand-light-100"><span>brand-light</span><span>-100</span></li>
+                                   <li class="chip brand-light-50"><span>brand-light</span><span>-50</span></li>
+                              </ul>
+                         </div>
 
-                    <div class="g-element-color">
-                    <div class="palette-name"><span>팔레트</span></div>
-                    <ul>
-                    <li class="chip red"><span>red</span></li>
-                    <li class="chip orange"><span>orange</span></li>
-                    <li class="chip yellow"><span>yellow</span></li>
-                    <li class="chip green"><span>green</span></li>
-                    <li class="chip blue"><span>blue</span></li>
-                    <!-- <li class="chip navy"><span>navy</span></li> -->
-                    <li class="chip purple"><span>purple</span></li>
-                    </ul>
-                    </div>
-
-                    <div class="g-element-color">
-                    <div class="palette-name"><span>팔레트-다크</span></div>
-                    <ul>
-                    <li class="chip red-dark"><span>red-dark</span></li>
-                    <li class="chip orange-dark"><span>orange-dark</span></li>
-                    <li class="chip yellow-dark"><span>yellow-dark</span></li>
-                    <li class="chip green-dark"><span>green-dark</span></li>
-                    <li class="chip blue-dark"><span>blue-dark</span></li>
-                    <!-- <li class="chip navy"><span>navy</span></li> -->
-                    <li class="chip purple-dark"><span>purple-dark</span></li>
-                    </ul>
-                    </div>
-
-                    <div class="g-element-color">
-                    <div class="palette-name"><span>브랜드</span></div>
-                    <ul>
-                    <li class="chip brand"><span>brand</span></li>
-                    </ul>
-                    </div>
-                    <div class="g-element-color">
-                    <div class="palette-name"><span></span></div>
-                    <ul>
-                    <li class="chip brand-950"><span>brand</span><span>-950</span></li>
-                    <li class="chip brand-900"><span>brand</span><span>-900</span></li>
-                    <li class="chip brand-800"><span>brand</span><span>-800</span></li>
-                    <li class="chip brand-700"><span>brand</span><span>-700</span></li>
-                    <li class="chip brand-600"><span>brand</span><span>-600</span></li>
-                    <li class="chip brand-500"><span>brand</span><span>-500</span></li>
-                    <li class="chip brand-400"><span>brand</span><span>-400</span></li>
-                    <li class="chip brand-300"><span>brand</span><span>-300</span></li>
-                    <li class="chip brand-200"><span>brand</span><span>-200</span></li>
-                    <li class="chip brand-100"><span>brand</span><span>-100</span></li>
-                    <li class="chip brand-50"><span>brand</span><span>-50</span></li>
-                    </ul>
-                    </div>
-
-                    <div class="g-element-color">
-                    <div class="palette-name"><span>브랜드 라이트</span></div>
-                    <ul>
-                    <li class="chip brand-light-980"><span>brand-light</span><span>-980</span></li>
-                    <li class="chip brand-light-900"><span>brand-light</span><span>-900</span></li>
-                    <li class="chip brand-light-800"><span>brand-light</span><span>-800</span></li>
-                    <li class="chip brand-light-700"><span>brand-light</span><span>-700</span></li>
-                    <li class="chip brand-light-600"><span>brand-light</span><span>-600</span></li>
-                    <li class="chip brand-light-500"><span>brand-light</span><span>-500</span></li>
-                    <li class="chip brand-light-400"><span>brand-light</span><span>-400</span></li>
-                    <li class="chip brand-light-300"><span>brand-light</span><span>-300</span></li>
-                    <li class="chip brand-light-200"><span>brand-light</span><span>-200</span></li>
-                    <li class="chip brand-light-100"><span>brand-light</span><span>-100</span></li>
-                    <li class="chip brand-light-50"><span>brand-light</span><span>-50</span></li>
-                    </ul>
-                    </div>
-
-                    <div class="g-element-color">
-                    <div class="palette-name"><span>브랜드 그레이</span></div>
-                    <ul>
-                    <li class="chip brand-grey-980"><span>brand-grey</span><span>-980</span></li>
-                    <li class="chip brand-grey-950"><span>brand-grey</span><span>-950</span></li>
-                    <li class="chip brand-grey-900"><span>brand-grey</span><span>-900</span></li>
-                    <li class="chip brand-grey-800"><span>brand-grey</span><span>-800</span></li>
-                    <li class="chip brand-grey-700"><span>brand-grey</span><span>-700</span></li>
-                    <li class="chip brand-grey-600"><span>brand-grey</span><span>-600</span></li>
-                    <li class="chip brand-grey-500"><span>brand-grey</span><span>-500</span></li>
-                    <li class="chip brand-grey-400"><span>brand-grey</span><span>-400</span></li>
-                    <li class="chip brand-grey-300"><span>brand-grey</span><span>-300</span></li>
-                    <li class="chip brand-grey-200"><span>brand-grey</span><span>-200</span></li>
-                    <li class="chip brand-grey-100"><span>brand-grey</span><span>-100</span></li>
-                    </ul>
-                    </div>
-
-                    <div class="g-element-color">
-                    <div class="palette-name"><span>surface</span></div>
-                    <ul>
-                    <li class="chip body"><span>body</span></li>
-                    <li class="chip sidebar"><span>sidebar</span></li>
-                    <li class="chip header"><span>header</span></li>
-                    <li class="chip content"><span>content</span></li>
-                    <li class="chip panel"><span>panel</span></li>
-                    <!-- <li class="chip panelSub"><span>panelSub</span></li> -->
-                    <li class="chip modal"><span>modal</span></li>
-                    <li class="chip popup"><span>popup</span></li>
-                    <li class="chip searchArea"><span>searchArea-bg</span><span></span></li>
-                    <li class="chip tooltip"><span>tooltip</span><span></span></li>
-                    </ul>
-                    </div>
-
-                    <div class="g-element-color">
-                    <div class="palette-name"><span>component</span></div>
-                    <ul>
-                    <li class="chip comp-brand"><span>brand</span><span></span></li>
-                    <li class="chip comp-brand-hover"><span>brand</span><span>-hover</span></li>
-                    <li class="chip comp-brand-active"><span>brand</span><span>-active</span></li>
-                    <li class="chip comp-brand-toggle"><span>brand</span><span>-toggle</span></li>
-                    <div class="divide"></div>
-                    <li class="chip comp-contrast"><span>contrast</span><span></span></li>
-                    <li class="chip comp-contrast-hover"><span>contrast</span><span>-hover</span></li>
-                    <li class="chip comp-contrast-active"><span>contrast</span><span>-active</span></li>
-                    <li class="chip comp-contrast-toggle"><span>contrast</span><span>-toggle</span></li>
-                    <li class="chip comp-contrast-focus"><span>contrast</span><span>-focus</span></li>
-                    <div class="divide"></div>
-                    <li class="chip comp-ghost"><span>ghost</span><span></span></li>
-                    <li class="chip comp-ghost-hover"><span>ghost</span><span>-hover</span></li>
-                    <li class="chip comp-ghost-active"><span>ghost</span><span>-active</span></li>
-                    <li class="chip comp-ghost-toggle"><span>ghost</span><span>-toggle</span></li>
-                    <div class="divide"></div>
-                    <li class="chip comp-disabled-light"><span>disabled</span><span>-light</span></li>
-                    <li class="chip comp-disabled"><span>disabled</span><span></span></li>
-                    <div class="divide"></div>
-                    <li class="chip comp-textBtn"><span>textBtn</span><span></span></li>
-                    <div class="divide"></div>
-                    <li class="chip comp-selection-mid"><span>selection</span><span>-mid</span></li>
-                    <li class="chip comp-selection-light"><span>selection</span><span>-light</span></li>
-                    </ul>
-                    </div>
-
-                    <div class="g-element-color">
-                    <div class="palette-name"><span>menu</span></div>
-                    <ul>
-                    <li class="chip comp-menu-favorite"><span>menu-favorite</span><span></span></li>
-                    <li class="chip comp-menu-favorite-hover"><span>menu-favorite</span><span>-hover</span></li>
-                    <li class="chip comp-menu-favorite-toggle"><span>menu-favorite</span><span>-toggle</span></li>
-                    <div class="divide"></div>
-                    <li class="chip comp-menu"><span>menu</span><span></span></li>
-                    <li class="chip comp-menu-hover"><span>menu</span><span>-hover</span></li>
-                    <li class="chip comp-menu-active"><span>menu</span><span>-active</span></li>
-
-                    <div class="divide"></div>
-                    <li class="chip comp-tab"><span>tab</span><span></span></li>
-                    <li class="chip comp-tab-hover"><span>tab</span><span>-hover</span></li>
-                    <li class="chip comp-tab-active"><span>tab</span><span>-active</span></li>
-                    <li class="chip comp-tab-toggle"><span>tab</span><span>-toggle</span></li>
-                    </ul>
+                         <div class="palette">
+                              <div class="palette-name"><span>브랜드</span></div>
+                              <ul>
+                                   <li class="chip brand-950"><span>brand</span><span>-950</span></li>
+                                   <li class="chip brand-900"><span>brand</span><span>-900</span></li>
+                                   <li class="chip brand-800"><span>brand</span><span>-800</span></li>
+                                   <li class="chip brand-700"><span>brand</span><span>-700</span></li>
+                                   <li class="chip brand-600"><span>brand</span><span>-600</span></li>
+                                   <li class="chip brand-500"><span>brand</span><span>-500</span></li>
+                                   <li class="chip brand-400"><span>brand</span><span>-400</span></li>
+                                   <li class="chip brand-300"><span>brand</span><span>-300</span></li>
+                                   <li class="chip brand-200"><span>brand</span><span>-200</span></li>
+                                   <li class="chip brand-100"><span>brand</span><span>-100</span></li>
+                                   <li class="chip brand-50"><span>brand</span><span>-50</span></li>
+                              </ul>
+                         </div>
+                         
+                         <div class="palette">
+                              <div class="palette-name"><span>브랜드 그레이</span></div>
+                              <ul>
+                                   <li class="chip brand-grey-980"><span>brand-grey</span><span>-980</span></li>
+                                   <li class="chip brand-grey-950"><span>brand-grey</span><span>-950</span></li>
+                                   <li class="chip brand-grey-900"><span>brand-grey</span><span>-900</span></li>
+                                   <li class="chip brand-grey-800"><span>brand-grey</span><span>-800</span></li>
+                                   <li class="chip brand-grey-700"><span>brand-grey</span><span>-700</span></li>
+                                   <li class="chip brand-grey-600"><span>brand-grey</span><span>-600</span></li>
+                                   <li class="chip brand-grey-500"><span>brand-grey</span><span>-500</span></li>
+                                   <li class="chip brand-grey-400"><span>brand-grey</span><span>-400</span></li>
+                                   <li class="chip brand-grey-300"><span>brand-grey</span><span>-300</span></li>
+                                   <li class="chip brand-grey-200"><span>brand-grey</span><span>-200</span></li>
+                                   <li class="chip brand-grey-100"><span>brand-grey</span><span>-100</span></li>
+                              </ul>
+                         </div>
                     </div>
                     <div class="g-element-color">
-                         <div class="palette-name"><span>컴포넌트 개별</span></div>
-                         <ul>
-                              <li class="chip comp-scroll"><span>scroll</span><span></span></li>
-                              <li class="chip comp-check-bg"><span>check</span><span>-bg</span></li>
-                    
-                              <li class="chip comp-simplevault"><span>simplevault</span><span></span></li>
-                    
-                         </ul>
-                    </div>
-                    
-                    <div class="g-element-color">
-                         <div class="palette-name"><span>차트</span></div>
-                         <ul>
-                              <li class="chip chart-01"><span>chart</span><span>-01</span></li>
-                              <li class="chip chart-01-sub"><span>chart</span><span>-01-sub</span></li>
-                              <li class="chip chart-01-point"><span>chart</span><span>-01-point</span></li>
-                              <div class="divide"></div>
-                              <li class="chip chart-02"><span>chart</span><span>-02</span></li>
-                              <li class="chip chart-02-sub"><span>chart</span><span>-02-sub</span></li>
-                              <li class="chip chart-02-point"><span>chart</span><span>-02-point</span></li>
-                              <div class="divide"></div>
-                              <li class="chip chart-03"><span>chart</span><span>-03</span></li>
-                              <li class="chip chart-03-sub"><span>chart</span><span>-03-sub</span></li>
-                              <li class="chip chart-03-point"><span>chart</span><span>-03-point</span></li>
-                              <div class="divide"></div>
-                              <li class="chip chart-04"><span>chart</span><span>-04</span></li>
-                              <li class="chip chart-04-sub"><span>chart</span><span>-04-sub</span></li>
-                              <li class="chip chart-04-point"><span>chart</span><span>-04-point</span></li>
-                              <div class="divide"></div>
-                              <li class="chip chart-border"><span>chart</span><span>-border</span></li>
-                         </ul>
+                         <div class="palette">
+                              <div class="palette-name"><span>surface</span></div>
+                              <ul>
+                                   <li class="chip body"><span>body</span></li>
+                                   <li class="chip sidebar"><span>sidebar</span></li>
+                                   <li class="chip header"><span>header</span></li>
+                                   <li class="chip content"><span>content</span></li>
+                                   <li class="chip panel"><span>panel</span></li>
+                                   <!-- <li class="chip panelSub"><span>panelSub</span></li> -->
+                                   <li class="chip modal"><span>modal</span></li>
+                                   <li class="chip popup"><span>popup</span></li>
+                                   <li class="chip searchArea"><span>searchArea-bg</span><span></span></li>
+                                   <li class="chip tooltip"><span>tooltip</span><span></span></li>
+                              </ul>
+                         </div>
+                         <div class="palette">
+                              <div class="palette-name"><span>component</span></div>
+                              <ul>
+                                   <li class="chip comp-brand"><span>brand</span><span></span></li>
+                                   <li class="chip comp-brand-hover"><span>brand</span><span>-hover</span></li>
+                                   <li class="chip comp-brand-active"><span>brand</span><span>-active</span></li>
+                                   <li class="chip comp-brand-toggle"><span>brand</span><span>-toggle</span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip comp-contrast"><span>contrast</span><span></span></li>
+                                   <li class="chip comp-contrast-hover"><span>contrast</span><span>-hover</span></li>
+                                   <li class="chip comp-contrast-active"><span>contrast</span><span>-active</span></li>
+                                   <li class="chip comp-contrast-toggle"><span>contrast</span><span>-toggle</span></li>
+                                   <li class="chip comp-contrast-focus"><span>contrast</span><span>-focus</span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip comp-ghost"><span>ghost</span><span></span></li>
+                                   <li class="chip comp-ghost-hover"><span>ghost</span><span>-hover</span></li>
+                                   <li class="chip comp-ghost-active"><span>ghost</span><span>-active</span></li>
+                                   <li class="chip comp-ghost-toggle"><span>ghost</span><span>-toggle</span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip comp-disabled-light"><span>disabled</span><span>-light</span></li>
+                                   <li class="chip comp-disabled"><span>disabled</span><span></span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip comp-textBtn"><span>textBtn</span><span></span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip comp-selection-mid"><span>selection</span><span>-mid</span></li>
+                                   <li class="chip comp-selection-light"><span>selection</span><span>-light</span></li>
+                              </ul>
+                         </div>
+                         
+                         <div class="palette">
+                              <div class="palette-name"><span>menu</span></div>
+                              <ul>
+                                   <li class="chip comp-menu-favorite"><span>menu-favorite</span><span></span></li>
+                                   <li class="chip comp-menu-favorite-hover"><span>menu-favorite</span><span>-hover</span></li>
+                                   <li class="chip comp-menu-favorite-toggle"><span>menu-favorite</span><span>-toggle</span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip comp-menu"><span>menu</span><span></span></li>
+                                   <li class="chip comp-menu-hover"><span>menu</span><span>-hover</span></li>
+                                   <li class="chip comp-menu-active"><span>menu</span><span>-active</span></li>
+                         
+                                   <div class="divide"></div>
+                                   <li class="chip comp-tab"><span>tab</span><span></span></li>
+                                   <li class="chip comp-tab-hover"><span>tab</span><span>-hover</span></li>
+                                   <li class="chip comp-tab-active"><span>tab</span><span>-active</span></li>
+                                   <li class="chip comp-tab-toggle"><span>tab</span><span>-toggle</span></li>
+                              </ul>
+                         </div>
+                         <div class="palette">
+                              <div class="palette-name"><span>컴포넌트 개별</span></div>
+                              <ul>
+                                   <li class="chip comp-scroll"><span>scroll</span><span></span></li>
+                                   <li class="chip comp-check-bg"><span>check</span><span>-bg</span></li>
+                         
+                                   <li class="chip comp-simplevault"><span>simplevault</span><span></span></li>
+                         
+                              </ul>
+                         </div>
+                         
+                         <div class="palette">
+                              <div class="palette-name"><span>차트</span></div>
+                              <ul>
+                                   <li class="chip chart-01"><span>chart</span><span>-01</span></li>
+                                   <li class="chip chart-01-sub"><span>chart</span><span>-01-sub</span></li>
+                                   <li class="chip chart-01-point"><span>chart</span><span>-01-point</span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip chart-02"><span>chart</span><span>-02</span></li>
+                                   <li class="chip chart-02-sub"><span>chart</span><span>-02-sub</span></li>
+                                   <li class="chip chart-02-point"><span>chart</span><span>-02-point</span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip chart-03"><span>chart</span><span>-03</span></li>
+                                   <li class="chip chart-03-sub"><span>chart</span><span>-03-sub</span></li>
+                                   <li class="chip chart-03-point"><span>chart</span><span>-03-point</span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip chart-04"><span>chart</span><span>-04</span></li>
+                                   <li class="chip chart-04-sub"><span>chart</span><span>-04-sub</span></li>
+                                   <li class="chip chart-04-point"><span>chart</span><span>-04-point</span></li>
+                                   <div class="divide"></div>
+                                   <li class="chip chart-border"><span>chart</span><span>-border</span></li>
+                              </ul>
+                         </div>
                     </div>
                </section>
                <!-- 그림자 -->
@@ -301,27 +374,23 @@
                          </ul>
                     </div>
                 </section>
-                <!-- spacing -->
-                 <section class="g-section">
+
+                <!-- 모양 -->
+               <section class="g-section">
                     <div class="title02">
-                         <h2>spacing</h2>
+                         <h2>모양</h2>
                     </div>
-                    <div class="g-element-spacing">
+                    <div class="g-element-shape">
                          <ul class="g-ex">
-                              <li class="spacing spacing-4">4</li>
-                              <li class="spacing spacing-8">8</li>
-                              <li class="spacing spacing-12">12</li>
-                              <li class="spacing spacing-16">16</li>
-                              <li class="spacing spacing-20">20</li>
-                              <li class="spacing spacing-24">24</li>
-                              <li class="spacing spacing-28">28</li>
-                              <li class="spacing spacing-32">32</li>
-                              <li class="spacing spacing-36">36</li>
-                              <li class="spacing spacing-40">40</li>
-                              <li class="spacing spacing-44">44</li>
+                              <li class="radius-s"><span>small</span></li>
+                              <li class="radius-m"><span>medium</span></li>
+                              <li class="radius-lg"><span>large</span></li>
+                              <li class="radius-exlg"><span>extra large</span></li>
                          </ul>
                     </div>
-                 </section>
+               </section>
+
+               <!-- 아이콘 -->
                  <section class="g-section">
                     <div class="title02">
                          <h2>아이콘</h2>
@@ -2451,7 +2520,12 @@
                     </div>
                </section> -->
           </div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+               integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+               crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+               integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+               crossorigin="anonymous" referrerpolicy="no-referrer"></script>
           <script src="script.js"></script>
      </body>
 </html>

@@ -1,25 +1,47 @@
 // script.js
-document.getElementById("export").addEventListener("click", () => {
-  // jsPDF 라이브러리에서 jsPDF 객체를 가져옵니다.
+document.getElementById("export").addEventListener("click", async () => {
   const { jsPDF } = window.jspdf;
 
-  // 새로운 PDF 문서 생성(jsPDF 인스턴스 생성)
-  const doc = new jsPDF();
+  try {
+    // html2canvas를 사용하여 콘텐츠를 캡처
+    const canvas = await html2canvas(document.getElementById("exportDoc"), {
+      scale: 2,
+    });
+    const imgData = canvas.toDataURL("image/png");
 
-  // Base64로 인코딩된 폰트 데이터 (여기에는 실제 Base64 문자열을 넣어야 합니다)
-  const base64FontData = ""; // 실제 Base64 인코딩된 폰트 문자열을 여기에 넣으세요
+    // A4 용지 크기 (mm)
+    const pdfWidth = 210; // A4 width in mm
+    const pdfHeight = 297; // A4 height in mm
 
-  // 한글 폰트 로드
-  doc.addFileToVFS("PretendardVariable.woff2", base64FontData);
-  doc.addFont("PretendardVariable.woff2", "PretendardVariable", "normal");
-  doc.setFont("PretendardVariable");
+    // 캔버스와 PDF 페이지 크기 설정
+    const imgWidth = pdfWidth;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-  // PDF에 추가할 내용 정의
-  const content = document.getElementById("exportDoc").innerText;
+    const pageHeight = pdfHeight;
+    let position = 0;
 
-  // PDF에 내용 추가
-  doc.text(content, 10, 10);
+    // PDF 생성
+    const pdf = new jsPDF({
+      orientation: "p", // 'p' for portrait, 'l' for landscape
+      unit: "mm",
+      format: [pdfWidth, pdfHeight],
+    });
 
-  // PDF 파일 다운로드
-  doc.save("guide.pdf");
+    // 첫 페이지 추가
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, pageHeight);
+    let heightLeft = imgHeight - pageHeight;
+
+    // 페이지가 넘어갈 경우
+    while (heightLeft > 0) {
+      position = heightLeft - pageHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, pageHeight);
+      heightLeft -= pageHeight;
+    }
+
+    // PDF 저장
+    pdf.save("webpage.pdf");
+  } catch (err) {
+    console.error("Error generating PDF:", err);
+  }
 });
