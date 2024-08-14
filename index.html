@@ -1,31 +1,54 @@
 <html lang="ko">
-     <head>
-          <meta charset="UTF-8">
-          <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-          <meta name='viewport' content='width=device-width, intial-scale=1.0'>
-          <title>UI가이드</title>
-          <link rel="stylesheet" href="css/reset.css">
-          <link rel="stylesheet" href="css/root.css">
-          <link rel="stylesheet" href="css/style.css">
-          <link rel="stylesheet" href="css/guide.css">
-     </head>
-     <body>
-          <div class="wrap" id="exportDoc">
-               <div class="g-header-wrap">
-                    <div class="g-header">
-                         <div class="logo">
-                              <h1>UI가이드</h1>
-                         </div>
-                         <!-- <button type="button" id="export" class="bw_btn medium primary">내보내기</button> -->
-                    </div>
-                    
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+     <meta name='viewport' content='width=device-width, intial-scale=1.0'>
+     <title>UI가이드</title>
+     <link rel="stylesheet" href="css/reset.css">
+     <link rel="stylesheet" href="css/root.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/guide.css">
+</head>
+
+<body>
+     <div class="g-header-wrap">
+          <div class="g-header">
+               <div class="logo">
+                    <h1>UI가이드</h1>
+               </div>
+               <div class="menuGroup">
+                    <ul>
+                         <li><a href="">Element</a></li>
+                         <li><a href="">Component</a></li>
+                         <li><a href="">Widget</a></li>
+                         <li><a href="">About</a></li>
+                    </ul>
+               </div>
+               <!-- <button type="button" id="export" class="bw_btn medium primary">내보내기</button> -->
+          </div>
+     </div>
+     <div class="wrap" id="exportDoc">
+          <!-- 탭 -->
+          <div class="g-page-wrap">
+               <div class="g-tabGroup">
+                    <ul>
+                         <li><button type="button" class="tab-button" data-tab="tab1">레이아웃</button></li>
+                         <li><button type="button" class="tab-button" data-tab="tab2">폰트</button></li>
+                         <li><button type="button" class="tab-button" data-tab="tab3">컬러</button></li>
+                         <li><button type="button" class="tab-button" data-tab="tab4">모양</button></li>
+                         <li><button type="button" class="tab-button" data-tab="tab5">아이콘</button></li>
+                    </ul>
                </div>
                <!-- 유닛 -->
-               <section class="g-section">
+               <section class="g-section" id="tab1">
                     <div class="title02">
-                         <h2>unit</h2>
+                         <h2>레이아웃</h2>
                     </div>
                     <div class="g-element-spacing">
+                         <div class="title03">
+                              <h3>유닛</h3>
+                         </div>
                          <ul class="g-ex">
                               <li class="spacing spacing-4">4</li>
                               <li class="spacing spacing-8">8</li>
@@ -40,14 +63,12 @@
                               <li class="spacing spacing-44">44</li>
                          </ul>
                     </div>
-               </section>
-               <!-- 레이아웃 -->
-                <section class="g-section">
-                    <div class="title02">
-                         <h2>레이아웃</h2>
-                    </div>
-                    <iframe src="sample/layout.html" width="1280" height="640" frameborder="0"></iframe>
+
                     <div class="g-element-layout">
+                         <div class="title03">
+                              <h3>레이아웃</h3>
+                         </div>
+                         <iframe src="sample/layout.html" width="1280" height="640" frameborder="0"></iframe>
                          <table>
                               <colgroup>
                                    <col>
@@ -90,9 +111,9 @@
                               </tbody>
                          </table>
                     </div>
-                </section>
+               </section>
                <!-- font -->
-               <section class="g-section">
+               <section class="g-section" id="tab2">
                     <div class="title02">
                          <h2>폰트</h2>
                     </div>
@@ -154,7 +175,7 @@
                     </div>
                </section>
                <!-- color -->
-               <section class="g-section">
+               <section class="g-section" id="tab3">
                     <div class="title02">
                          <h2>컬러</h2>
                     </div>
@@ -171,7 +192,7 @@
                                    <li class="chip purple-light"><span>purple-light</span></li>
                               </ul>
                          </div>
-                         
+
                          <div class="palette">
                               <div class="palette-name"><span>팔레트</span></div>
                               <ul>
@@ -184,7 +205,7 @@
                                    <li class="chip purple"><span>purple</span></li>
                               </ul>
                          </div>
-                         
+
                          <div class="palette">
                               <div class="palette-name"><span>팔레트-다크</span></div>
                               <ul>
@@ -242,7 +263,7 @@
                                    <li class="chip brand-50"><span>brand</span><span>-50</span></li>
                               </ul>
                          </div>
-                         
+
                          <div class="palette">
                               <div class="palette-name"><span>브랜드 그레이</span></div>
                               <ul>
@@ -304,18 +325,22 @@
                                    <li class="chip comp-selection-light"><span>selection</span><span>-light</span></li>
                               </ul>
                          </div>
-                         
+
                          <div class="palette">
                               <div class="palette-name"><span>menu</span></div>
                               <ul>
                                    <li class="chip comp-menu-favorite"><span>menu-favorite</span><span></span></li>
-                                   <li class="chip comp-menu-favorite-hover"><span>menu-favorite</span><span>-hover</span></li>
-                                   <li class="chip comp-menu-favorite-toggle"><span>menu-favorite</span><span>-toggle</span></li>
+                                   <li class="chip comp-menu-favorite-hover">
+                                        <span>menu-favorite</span><span>-hover</span>
+                                   </li>
+                                   <li class="chip comp-menu-favorite-toggle">
+                                        <span>menu-favorite</span><span>-toggle</span>
+                                   </li>
                                    <div class="divide"></div>
                                    <li class="chip comp-menu"><span>menu</span><span></span></li>
                                    <li class="chip comp-menu-hover"><span>menu</span><span>-hover</span></li>
                                    <li class="chip comp-menu-active"><span>menu</span><span>-active</span></li>
-                         
+
                                    <div class="divide"></div>
                                    <li class="chip comp-tab"><span>tab</span><span></span></li>
                                    <li class="chip comp-tab-hover"><span>tab</span><span>-hover</span></li>
@@ -328,12 +353,12 @@
                               <ul>
                                    <li class="chip comp-scroll"><span>scroll</span><span></span></li>
                                    <li class="chip comp-check-bg"><span>check</span><span>-bg</span></li>
-                         
+
                                    <li class="chip comp-simplevault"><span>simplevault</span><span></span></li>
-                         
+
                               </ul>
                          </div>
-                         
+
                          <div class="palette">
                               <div class="palette-name"><span>차트</span></div>
                               <ul>
@@ -358,10 +383,10 @@
                          </div>
                     </div>
                </section>
-               <!-- 그림자 -->
-                <section class="g-section">
+               <!--모양 -->
+               <section class="g-section" id="tab4">
                     <div class="title02">
-                         <h2>그림자</h2>
+                         <h2>모양</h2>
                     </div>
                     <div class="g-element-shadow">
                          <ul class="g-ex">
@@ -372,13 +397,6 @@
                               <li class="g-ex-shadow-modal"><span>modal</span></li>
                               <li class="g-ex-shadow-dash"><span>dash</span></li>
                          </ul>
-                    </div>
-                </section>
-
-                <!-- 모양 -->
-               <section class="g-section">
-                    <div class="title02">
-                         <h2>모양</h2>
                     </div>
                     <div class="g-element-shape">
                          <ul class="g-ex">
@@ -391,7 +409,7 @@
                </section>
 
                <!-- 아이콘 -->
-                 <section class="g-section">
+               <section class="g-section" id="tab5">
                     <div class="title02">
                          <h2>아이콘</h2>
                     </div>
@@ -424,7 +442,7 @@
                                         consider consulting a lawyer and see the full license for all details.
                                    </p>
                               </div>
-                         
+
                               <div>
                                    <h3>아이콘 적용 방법</h3>
                                    <p>자체 호스팅 방식</p>
@@ -437,11 +455,11 @@
                                    </p>
                               </div>
                          </div>
-                         
+
                          <ol>
                               <!-- <li>
-                                 <h2>아이콘 분류 순서</h2>
-                               </li> -->
+                                                                    <h2>아이콘 분류 순서</h2>
+                                                                  </li> -->
                               <li>1.기본 아이콘</li>
                               <li>2.사칙연산</li>
                               <li>3.방향</li>
@@ -461,7 +479,7 @@
                               <li>17.추가 아이콘</li>
                               <li>18.버튼 예시</li>
                          </ol>
-                         
+
                          <!-- 기본 아이콘 -->
                          <div class="handoff page-test-icon">
                               <h2>1.기본 아이콘</h2>
@@ -499,31 +517,31 @@
                                    <li>
                                         <span class="icon-test md-32">&#xe2c0;</span>
                                         <span>cloud_download</span>
-                         
+
                                         <span class="codePoint">e2c0</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe2c3;</span>
                                         <span>cloud_upload</span>
-                         
+
                                         <span class="codePoint">e2c3</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe2bf;</span>
                                         <span>cloud_done</span>
-                         
+
                                         <span class="codePoint">e2bf</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe000;</span>
                                         <span>error</span>
-                         
+
                                         <span class="codePoint">e000</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe887;</span>
                                         <span>help</span>
-                         
+
                                         <span class="codePoint">e887</span>
                                    </li>
                                    <li>
@@ -534,7 +552,7 @@
                                    <li>
                                         <span class="icon-test md-32">&#xe99a;</span>
                                         <span>dangerous</span>
-                         
+
                                         <span class="codePoint">e99a</span>
                                    </li>
                                    <li>
@@ -555,78 +573,78 @@
                                    <li>
                                         <span class="icon-test md-32">&#xe746;</span>
                                         <span>draw</span>
-                         
+
                                         <span class="codePoint">e746</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe8b8;</span>
                                         <span>settings</span>
-                         
+
                                         <span class="codePoint">e8b8</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe872;</span>
                                         <span>delete</span>
-                         
+
                                         <span class="codePoint">e872</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe241;</span>
                                         <span>format_list_bulleted</span>
-                         
+
                                         <span class="codePoint">e241</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe5d2;</span>
                                         <span>menu</span>
-                         
+
                                         <span class="codePoint">e5d2</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe5ca;</span>
                                         <span>check</span>
-                         
+
                                         <span class="codePoint">e5ca</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xf799;</span>
                                         <span>globe_asia</span>
-                         
+
                                         <span class="codePoint">f799</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe8b6;</span>
                                         <span>search</span>
-                         
+
                                         <span class="codePoint">e8b6</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe9ba;</span>
                                         <span>logout</span>
-                         
+
                                         <span class="codePoint">e9ba</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe866;</span>
                                         <span>bookmark</span>
-                         
+
                                         <span class="codePoint">e866</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xe7fd;</span>
                                         <span>person</span>
-                         
+
                                         <span class="codePoint">e7fd</span>
                                    </li>
                                    <li>
                                         <span class="icon-test md-32">&#xf1c3;</span>
                                         <span>wysiwyg</span>
-                         
+
                                         <span class="codePoint">f1c3</span>
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 사칙연산 -->
                          <div class="handoff page-test-icon">
                               <h2>2.사칙연산</h2>
@@ -648,7 +666,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 방향 -->
                          <div class="handoff page-test-icon">
                               <h2>3.방향</h2>
@@ -673,7 +691,7 @@
                                         <span>keyboard_double_arrow_right</span>
                                         <span class="codePoint">eac9</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe5c7;</span>
                                         <span>arrow_drop_up</span>
@@ -706,7 +724,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 레이아웃 -->
                          <div class="handoff page-test-icon">
                               <h2>4.레이아웃</h2>
@@ -818,7 +836,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 카메라 -->
                          <div class="handoff page-test-icon">
                               <h2>5.카메라</h2>
@@ -863,10 +881,10 @@
                                         <span>Video Camera Front</span>
                                         <span class="codePoint">f080</span>
                                    </li>
-                         
+
                               </ul>
                          </div>
-                         
+
                          <!-- 화면 -->
                          <div class="handoff page-test-icon">
                               <h2>6.화면</h2>
@@ -948,7 +966,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 설정 -->
                          <div class="handoff page-test-icon">
                               <h2>7.설정</h2>
@@ -1000,7 +1018,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 알림 -->
                          <div class="handoff page-test-icon">
                               <h2>8.알림</h2>
@@ -1012,7 +1030,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 폴더 -->
                          <div class="handoff page-test-icon">
                               <h2>9.폴더, 문서</h2>
@@ -1047,13 +1065,13 @@
                                         <span>Problem</span>
                                         <span class="codePoint">e122</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xf456;</span>
                                         <span>Bookmark Flag</span>
                                         <span class="codePoint">f456</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe179;</span>
                                         <span>Inventory</span>
@@ -1064,7 +1082,7 @@
                                         <span>Content Paste</span>
                                         <span class="codePoint">e14f</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe156;</span>
                                         <span>Inbox</span>
@@ -1095,7 +1113,7 @@
                                         <span>Note Stack</span>
                                         <span class="codePoint">f562</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xf53e;</span>
                                         <span>Book2</span>
@@ -1141,7 +1159,7 @@
                                         <span>Fact Check</span>
                                         <span class="codePoint">f0c5</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe85d;</span>
                                         <span>Assignment</span>
@@ -1172,7 +1190,7 @@
                                         <span>Description</span>
                                         <span class="codePoint">e873</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe745;</span>
                                         <span>Edit Note</span>
@@ -1183,7 +1201,7 @@
                                         <span>Menu Book</span>
                                         <span class="codePoint">ea19</span>
                                    </li>
-                         
+
                               </ul>
                          </div>
                          <!-- 연결, 서버 -->
@@ -1250,13 +1268,13 @@
                                         <span>Troubleshoot</span>
                                         <span class="codePoint">e1d2</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xf0c1;</span>
                                         <span>Conversion Path</span>
                                         <span class="codePoint">f0c1</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xf535;</span>
                                         <span>Linked Services</span>
@@ -1267,7 +1285,7 @@
                                         <span>Tactic</span>
                                         <span class="codePoint">f564</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe650;</span>
                                         <span>Vital Signs</span>
@@ -1348,7 +1366,7 @@
                                         <span>Hard drive</span>
                                         <span class="codePoint">f80e</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe8be;</span>
                                         <span>Settings Ethernet</span>
@@ -1369,10 +1387,10 @@
                                         <span>Private Connectivity</span>
                                         <span class="codePoint">e744</span>
                                    </li>
-                         
+
                               </ul>
                          </div>
-                         
+
                          <!-- 차트 관련 -->
                          <div class="handoff page-test-icon">
                               <h2>11.차트</h2>
@@ -1499,7 +1517,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 신기술 관련 -->
                          <div class="handoff page-test-icon">
                               <h2>12.신기술</h2>
@@ -1541,7 +1559,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 위치, 지도 -->
                          <div class="handoff page-test-icon">
                               <h2>13.위치, 지도</h2>
@@ -1586,10 +1604,10 @@
                                         <span>Share Location</span>
                                         <span class="codePoint">f05f</span>
                                    </li>
-                         
+
                               </ul>
                          </div>
-                         
+
                          <!-- 사람 -->
                          <div class="handoff page-test-icon">
                               <h2>14.사람</h2>
@@ -1609,7 +1627,7 @@
                                         <span>Person</span>
                                         <span class="codePoint">e7fd</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe65b;</span>
                                         <span>Ad Group</span>
@@ -1645,10 +1663,10 @@
                                         <span>Passkey</span>
                                         <span class="codePoint">f87f</span>
                                    </li>
-                         
+
                               </ul>
                          </div>
-                         
+
                          <!-- 목록 -->
                          <div class="handoff page-test-icon">
                               <h2>15.목록</h2>
@@ -1688,10 +1706,10 @@
                                         <span>Format List Bulleted</span>
                                         <span class="codePoint">e241</span>
                                    </li>
-                         
+
                               </ul>
                          </div>
-                         
+
                          <!-- 개발 -->
                          <div class="handoff page-test-icon">
                               <h2>16.개발</h2>
@@ -1716,13 +1734,13 @@
                                         <span>Developer Board</span>
                                         <span class="codePoint">e30d</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe1b0;</span>
                                         <span>Developer Mode</span>
                                         <span class="codePoint">e1b0</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xf51b;</span>
                                         <span>Deployed Code Account</span>
@@ -1750,7 +1768,7 @@
                                    </li>
                               </ul>
                          </div>
-                         
+
                          <!-- 추가 아이콘 -->
                          <div class="handoff page-test-icon">
                               <h2>17.추가 아이콘</h2>
@@ -1785,7 +1803,7 @@
                                         <span>Dataset</span>
                                         <span class="codePoint">f8ee</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xf8a4;</span>
                                         <span>Share Reviews</span>
@@ -1796,9 +1814,9 @@
                                         <span>Quick Reference All</span>
                                         <span class="codePoint">f801</span>
                                    </li>
-                         
-                         
-                         
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xf500;</span>
                                         <span>Stacks</span>
@@ -1814,29 +1832,29 @@
                                         <span>Clock Loader 80</span>
                                         <span class="codePoint">f722</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xf511;</span>
                                         <span>Highlight Mouse Cursor</span>
                                         <span class="codePoint">f511</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xebb2;</span>
                                         <span>Chronic</span>
                                         <span class="codePoint">ebb2</span>
                                    </li>
-                         
-                         
-                         
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe730;</span>
                                         <span>Bottom App Bar</span>
                                         <span class="codePoint">e730</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe7af;</span>
                                         <span>Workspace Premium</span>
@@ -1847,7 +1865,7 @@
                                         <span>Psychology</span>
                                         <span class="codePoint">ea4a</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe2db;</span>
                                         <span>Travel Explore</span>
@@ -1863,7 +1881,7 @@
                                         <span>Hive</span>
                                         <span class="codePoint">eaa6</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xf5e1;</span>
                                         <span>Mystery</span>
@@ -1874,8 +1892,8 @@
                                         <span>Globe Asia</span>
                                         <span class="codePoint">f799</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xf5e5;</span>
                                         <span>Crossword</span>
@@ -1911,8 +1929,8 @@
                                         <span>Lightbulb</span>
                                         <span class="codePoint">e0f0</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe892;</span>
                                         <span>Label</span>
@@ -1928,10 +1946,10 @@
                                         <span>Help Center</span>
                                         <span class="codePoint">f1c0</span>
                                    </li>
-                         
-                         
-                         
-                         
+
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe19f;</span>
                                         <span>Priority</span>
@@ -1982,21 +2000,21 @@
                                         <span>Offline Bolt</span>
                                         <span class="codePoint">e932</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xebfe;</span>
                                         <span>Lightbulb Circle</span>
                                         <span class="codePoint">ebfe</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xf0f5;</span>
                                         <span>Batch Prediction</span>
                                         <span class="codePoint">f0f5</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xea03;</span>
                                         <span>Web Traffic</span>
@@ -2037,13 +2055,13 @@
                                         <span>Mail</span>
                                         <span class="codePoint">e158</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe0b0;</span>
                                         <span>Call</span>
                                         <span class="codePoint">e0b0</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe163;</span>
                                         <span>Send</span>
@@ -2059,7 +2077,7 @@
                                         <span>Forum</span>
                                         <span class="codePoint">e0bf</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe94c;</span>
                                         <span>Contact Support</span>
@@ -2085,8 +2103,8 @@
                                         <span>Draft</span>
                                         <span class="codePoint">e151</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe6c7;</span>
                                         <span>Stacked Email</span>
@@ -2097,7 +2115,7 @@
                                         <span>Tooltip</span>
                                         <span class="codePoint">e9f8</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe425;</span>
                                         <span>Timer</span>
@@ -2113,25 +2131,25 @@
                                         <span>Imagesmode</span>
                                         <span class="codePoint">efa2</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe422;</span>
                                         <span>Timelapse</span>
                                         <span class="codePoint">e422</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe3c6;</span>
                                         <span>Crop Square</span>
                                         <span class="codePoint">e3c6</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe3a5;</span>
                                         <span>Blur On</span>
                                         <span class="codePoint">e3a5</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe3ea;</span>
                                         <span>Grain</span>
@@ -2142,8 +2160,8 @@
                                         <span>Lens Blur</span>
                                         <span class="codePoint">f029</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe3a2;</span>
                                         <span>Blur Circular</span>
@@ -2154,28 +2172,28 @@
                                         <span>Filter Tilt Shift</span>
                                         <span class="codePoint">e3e2</span>
                                    </li>
-                         
-                         
-                         
-                         
+
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe8f9;</span>
                                         <span>Work</span>
                                         <span class="codePoint">e8f9</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xea5f;</span>
                                         <span>Calculate</span>
                                         <span class="codePoint">ea5f</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe7ee;</span>
                                         <span>Domain</span>
                                         <span class="codePoint">e7ee</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xec09;</span>
                                         <span>Work History</span>
@@ -2191,7 +2209,7 @@
                                         <span>Track Changes</span>
                                         <span class="codePoint">e8e1</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xeb62;</span>
                                         <span>Domain Add</span>
@@ -2202,8 +2220,8 @@
                                         <span>Source Environment</span>
                                         <span class="codePoint">e527</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe70e;</span>
                                         <span>Enterprise</span>
@@ -2214,7 +2232,7 @@
                                         <span>Chart Data</span>
                                         <span class="codePoint">e473</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe0ae;</span>
                                         <span>Flowsheet </span>
@@ -2225,7 +2243,7 @@
                                         <span>Order Approve</span>
                                         <span class="codePoint">f812</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe527;</span>
                                         <span>Source Environment</span>
@@ -2236,19 +2254,19 @@
                                         <span>Layers</span>
                                         <span class="codePoint">e53b</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe1eb;</span>
                                         <span>Emergency</span>
                                         <span class="codePoint">e1eb</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xef56;</span>
                                         <span>Local Police</span>
                                         <span class="codePoint">ef56</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe48f;</span>
                                         <span>Package</span>
@@ -2259,7 +2277,7 @@
                                         <span>Beenhere</span>
                                         <span class="codePoint">e52d</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe578;</span>
                                         <span>Edit Attributes</span>
@@ -2280,11 +2298,11 @@
                                         <span>File Map</span>
                                         <span class="codePoint">e2c5</span>
                                    </li>
-                         
-                         
-                         
-                         
-                         
+
+
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xf10a;</span>
                                         <span>Design Services</span>
@@ -2310,10 +2328,10 @@
                                         <span>Archive</span>
                                         <span class="codePoint">e149</span>
                                    </li>
-                         
-                         
-                         
-                         
+
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe99b;</span>
                                         <span>Dashboard Customize</span>
@@ -2324,62 +2342,62 @@
                                         <span>Find in Page</span>
                                         <span class="codePoint">e880</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe264;</span>
                                         <span>Title</span>
                                         <span class="codePoint">e264</span>
                                    </li>
-                         
-                         
-                         
-                         
-                         
+
+
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xeb39;</span>
                                         <span>Hexagon</span>
                                         <span class="codePoint">eb39</span>
                                    </li>
-                         
-                         
-                         
-                         
+
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe9e4;</span>
                                         <span>Speed</span>
                                         <span class="codePoint">e9e4</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe048;</span>
                                         <span>Subtitles</span>
                                         <span class="codePoint">e048</span>
                                    </li>
-                         
-                         
-                         
-                         
+
+
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe322;</span>
                                         <span>Memory</span>
                                         <span class="codePoint">e322</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xe8c3;</span>
                                         <span>Settings Input Svideo</span>
                                         <span class="codePoint">e8c3</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe30f;</span>
                                         <span>Gamepad</span>
                                         <span class="codePoint">e30f</span>
                                    </li>
-                         
-                         
+
+
                                    <li>
                                         <span class="icon-test md-32">&#xf7a3;</span>
                                         <span>Memory Alt</span>
@@ -2400,13 +2418,13 @@
                                         <span>Gpp Maybe</span>
                                         <span class="codePoint">f014</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe1af;</span>
                                         <span>Data Usage</span>
                                         <span class="codePoint">e1af</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe1ac;</span>
                                         <span>Brightness High</span>
@@ -2463,7 +2481,7 @@
                                         <span>Vpn Lock</span>
                                         <span class="codePoint">e62f</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xe593;</span>
                                         <span>Encrypted</span>
@@ -2474,7 +2492,7 @@
                                         <span>Add Moderator</span>
                                         <span class="codePoint">e97d</span>
                                    </li>
-                         
+
                                    <li>
                                         <span class="icon-test md-32">&#xf650;</span>
                                         <span>Shield Person</span>
@@ -2498,10 +2516,15 @@
                               </ul>
                          </div>
                     </div>
-                 </section>
-               <footer></footer>
-               <!-- button -->
-               <!-- <section class="g-section">
+               </section>
+          </div>
+          <!-- 푸터 -->
+          <footer>
+               <span>copyright.2024.(주)벨로크</span>
+               <span>grlee@bellock.co.kr</span>
+          </footer>
+          <!-- button -->
+          <!-- <section class="g-section">
                     <div>
                          <h2>버튼</h2>
                     </div>
@@ -2519,13 +2542,8 @@
                          </ul>
                     </div>
                </section> -->
-          </div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-               integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
-               crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-               integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
-               crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-          <script src="script.js"></script>
-     </body>
+     </div>
+     <script src="script.js"></script>
+</body>
+
 </html>

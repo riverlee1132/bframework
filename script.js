@@ -1,47 +1,35 @@
 // script.js
-document.getElementById("export").addEventListener("click", async () => {
-  const { jsPDF } = window.jspdf;
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".g-section");
 
-  try {
-    // html2canvas를 사용하여 콘텐츠를 캡처
-    const canvas = await html2canvas(document.getElementById("exportDoc"), {
-      scale: 2,
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const tabId = button.getAttribute("data-tab");
+      const content = document.getElementById(tabId);
+
+      // 모든 탭 버튼과 내용에서 'active' 클래스를 제거
+      tabButtons.forEach((btn) => {
+        if (btn !== button) {
+          btn.classList.remove("active");
+        }
+      });
+      tabContents.forEach((content) => {
+        if (content.id !== tabId) {
+          content.classList.remove("active");
+        }
+      });
+
+      // 클릭한 버튼에 'active' 클래스 토글
+      button.classList.toggle("active");
+
+      // 해당 탭과 연결된 내용 토글
+      content.classList.toggle("active");
     });
-    const imgData = canvas.toDataURL("image/png");
+  });
 
-    // A4 용지 크기 (mm) - 가로 방향
-    const pdfWidth = 297; // A4 width in mm (landscape)
-    const pdfHeight = 210; // A4 height in mm (landscape)
-
-    // 캔버스와 PDF 페이지 크기 설정
-    const imgWidth = pdfWidth;
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-    const pdf = new jsPDF({
-      orientation: "l", // 'l' for landscape
-      unit: "mm",
-      format: [pdfWidth, pdfHeight],
-    });
-
-    // 페이지 크기에 맞춰 이미지를 나누어 저장
-    let position = 0;
-    let heightLeft = imgHeight;
-
-    // 첫 페이지 추가
-    pdf.addImage(imgData, "PNG", 0, position, imgWidth, pdfHeight);
-    heightLeft -= pdfHeight;
-
-    // 페이지가 넘어갈 경우
-    while (heightLeft > 0) {
-      position = heightLeft - pdfHeight;
-      pdf.addPage();
-      pdf.addImage(imgData, "PNG", 0, position, imgWidth, pdfHeight);
-      heightLeft -= pdfHeight;
-    }
-
-    // PDF 저장
-    pdf.save("webpage.pdf");
-  } catch (err) {
-    console.error("Error generating PDF:", err);
+  // 기본적으로 첫 번째 탭을 활성화하고 내용 표시
+  if (tabButtons.length > 0) {
+    tabButtons[0].click();
   }
 });
