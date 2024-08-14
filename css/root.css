@@ -1,0 +1,246 @@
+:root {
+     /* spacing */
+     --spacing-01: 4px;
+     --spacing-02: 8px;
+     --spacing-03: 12px;
+     --spacing-04: 16px;
+     --spacing-05: 20px;
+     --spacing-06: 24px;
+     --spacing-07: 28px;
+     --spacing-08: 32px;
+     --spacing-09: 36px;
+     --spacing-10: 40px;
+     --spacing-11: 44px;
+
+     /* 폰트 */
+     --font-line-height: 100%;
+     --font-letter-spacing: -0.25;
+     --font-weight-light: var(--value-weight-300);
+     --font-weight-regular: var(--value-weight-400);
+     --font-weight-medium: var(--value-weight-500);
+     --font-weight-semibold: var(--value-weight-700);
+     --font-weight-bold: var(--value-weight-800);
+
+     --font-body-s: 12px;
+     --font-body-m: 14px;
+     --font-body-lg: 16px;
+
+     --font-title-s: 16px;
+     --font-title-m: 20px;
+     --font-title-lg: 24px;
+
+     --font-display-s: 28px;
+     --font-display-m: 32px;
+     --font-display-lg: 40px;
+     --font-display-exlg: 44px;
+
+
+     /* 그림자 */
+     --shadow-tab: 0px -7px 8px -4px rgba(0, 0, 0, 0.1);
+     --shadow-window: 0px 16px 24px 2px rgba(0, 0, 0, 0.1);
+     --shadow-focused: 0px 0px 0px 2px rgba(0, 0, 0, 0.03);
+     --shadow-hover: 0px 0px 0px 2px rgba(0, 0, 0, 0.03);
+     --shadow-modal: 0px 0px 5px 2px hsla(209, 10%, 10%, 0.15);
+     --shadow-dash: 0px 0px 10px 2px hsla(209, 29%, 3%, 0.1);
+
+     /* gap */
+     --gap-comp-s: 4px;
+     --gap-comp-m: 8px;
+     --gap-comp-lg: 12px;
+
+     /* 팔레트 */
+     --black: var(--brand-100);
+     --white: #ffffff;
+     --red-light: hsl(0, 70%, 70%);
+     --red: hsl(0, 60%, 57%);
+     --red-dark: hsl(0, 70%, 37%);
+     --orange-light: hsl(25, 70%, 70%);
+     --orange: hsl(25, 66%, 57%);
+     --orange-dark: hsl(25, 70%, 47%);
+     --yellow-light: hsl(50, 70%, 70%);
+     --yellow: hsl(50, 90%, 47%);
+     --yellow-dark: hsl(50, 70%, 46%);
+     --green-light: hsl(144, 70%, 70%);
+     --green: hsl(144, 60%, 48%);
+     --green-dark: hsl(144, 70%, 38%);
+     --blue-light: hsl(220, 70%, 70%);
+     --blue: hsl(220, 50%, 60%);
+     --blue-dark: hsl(220, 70%, 40%);
+     --purple-light: hsl(260, 70%, 70%);
+     --purple: hsl(260, 40%, 60%);
+     --purple-dark: hsl(260, 70%, 30%);
+
+     /* 브랜드 hsl */
+     --h: 210;
+     --s-grey: 10%;
+     --s: 30%;
+     --s-light: 40%;
+     --brand: hsla(var(--h), var(--s), 40%, 1);
+
+     /* brand-grey 100~980 */
+     --brand-grey-980: hsl(var(--h), var(--s-grey), 98%);
+     --brand-grey-950: hsl(var(--h), var(--s-grey), 95%);
+     --brand-grey-900: hsl(var(--h), var(--s-grey), 90%);
+     --brand-grey-800: hsl(var(--h), var(--s-grey), 80%);
+     --brand-grey-700: hsl(var(--h), var(--s-grey), 70%);
+     --brand-grey-600: hsl(var(--h), var(--s-grey), 60%);
+     --brand-grey-500: hsl(var(--h), var(--s-grey), 50%);
+     --brand-grey-400: hsl(var(--h), var(--s-grey), 40%);
+     --brand-grey-300: hsl(var(--h), var(--s-grey), 30%);
+     --brand-grey-200: hsl(var(--h), var(--s-grey), 20%);
+     --brand-grey-100: hsl(var(--h), var(--s-grey), 10%);
+
+     /* brand 50~950 */
+     --brand-950: hsl(var(--h), var(--s), 95%);
+     --brand-900: hsl(var(--h), var(--s), 90%);
+     --brand-800: hsl(var(--h), var(--s), 80%);
+     --brand-700: hsl(var(--h), var(--s), 70%);
+     --brand-600: hsl(var(--h), var(--s), 60%);
+     --brand-500: hsl(var(--h), var(--s), 50%);
+     --brand-400: hsl(var(--h), var(--s), 40%);
+     --brand-300: hsl(var(--h), var(--s), 30%);
+     --brand-200: hsl(var(--h), var(--s), 20%);
+     --brand-100: hsl(var(--h), var(--s), 10%);
+     --brand-50: hsl(var(--h), var(--s), 5%);
+
+     /* brand-light 300~980 */
+     --brand-light-980: hsl(var(--h), var(--s-light), 98%);
+     --brand-light-900: hsl(var(--h), var(--s-light), 90%);
+     --brand-light-800: hsl(var(--h), var(--s-light), 85%);
+     --brand-light-700: hsl(var(--h), var(--s-light), 70%);
+     --brand-light-600: hsl(var(--h), var(--s-light), 60%);
+     --brand-light-500: hsl(var(--h), var(--s-light), 50%);
+     --brand-light-400: hsl(var(--h), var(--s-light), 40%);
+     --brand-light-300: hsl(var(--h), var(--s-light), 30%);
+     --brand-light-200: hsl(var(--h), var(--s-light), 20%);
+     --brand-light-100: hsl(var(--h), var(--s-light), 10%);
+     --brand-light-50: hsl(var(--h), var(--s-light), 5%);
+}
+
+/* 라이트 모드 */
+:root,
+body[bw-theme='light'] {
+     /* 텍스트 */
+     --comp-text-btow: var(--black);
+     --comp-text-btob: var(--black);
+     --comp-text-wtow: var(--white);
+     --comp-text-wtob: var(--white);
+     --comp-text-wtobr: var(--white);
+     --comp-text-brtobr: var(--brand-700);
+     --comp-text-ttot: var(--brand-grey-600);
+     --comp-text-stos: var(--brand-grey-400);
+     --comp-text-dtod: var(--brand-grey-400);
+
+     /* 배경 */
+     --comp-surface-body: hsl(209, 10%, 95%);
+     --comp-surface-header: var(--brand-grey-300);
+     --comp-surface-sidebar: var(--brand-grey-950);
+     --comp-surface-content: var(--white);
+     --comp-surface-panel: var(--white);
+     --comp-surface-panel-border: var(--brand-grey-800);
+     --comp-surface-modal: var(--brand-grey-980);
+     --comp-surface-popup: var(--brand-grey-980);
+     --comp-surface-window-border: var(--brand-grey-700);
+     --comp-surface-searchArea: var(--brand-grey-980);
+     --comp-surface-tooltip: var(--brand-grey-950);
+
+     /* 컴포넌트 */
+     --comp-brand: var(--brand-500);
+     --comp-brand-hover: var(--brand-600);
+     --comp-brand-active: var(--brand-500);
+     --comp-brand-toggle: var(--brand-500);
+     --comp-brand-border: var(--comp-stroke);
+     --comp-contrast: var(--white);
+     --comp-contrast-hover: var(--brand-grey-900);
+     --comp-contrast-active: var(--brand-grey-800);
+     --comp-contrast-toggle: var(--brand-grey-900);
+     --comp-contrast-border: var(--comp-stroke);
+     --comp-contrast-focus: var(--brand-light-500);
+     --comp-ghost-hover: var(--brand-grey-200);
+     --comp-ghost-active: var(--brand-grey-600);
+     --comp-ghost-toggle: var(--brand-grey-600);
+     --comp-disabled: hsl(209, 10%, 80%);
+     --comp-disabled-border: var(--brand-grey-800);
+     --comp-disabled-light: var(--brand-grey-900);
+     --comp-selection-light: hsla(var(--h), 60%, 40%, 0.2);
+     --comp-selection-mid: hsla(var(--h), 60%, 40%, 1);
+     --comp-textBtn: var(--blue-dark);
+
+     /*  */
+     --comp-menu-favorite: var(--brand-grey-600);
+     --comp-menu-favorite-hover: var(--brand-grey-500);
+     --comp-menu-favorite-toggle: var(--brand-light-300);
+
+     --comp-menu: transparent;
+     --comp-menu-hover: hsl(var(--h), var(--s-grey), 85%);
+     --comp-menu-active: var(--brand-grey-800);
+
+     --comp-tab: transparent;
+     --comp-tab-hover: var(--comp-surface-content);
+     --comp-tab-active: var(--comp-surface-content);
+     --comp-tab-toggle: var(--comp-surface-content);
+
+     --comp-stroke: var(--brand-grey-800);
+     --comp-scroll: var(--brand-grey-800);
+     --comp-check-bg: var(--blue-dark);
+     --comp-check-border: var(--blue-dark);
+
+     --comp-simplevault: var(--brand-grey-980);
+     --comp-simplevault-border: var(--comp-stroke);
+
+     /* 차트 */
+     --comp-chart-grid: rgba(0, 0, 0, 0.05);
+     --comp-chart-border: hsla(240, 100%, 10%, 0.1);
+     --comp-chart-01: hsla(180, 50%, 40%, 1);
+     --comp-chart-01-sub: hsla(170, 50%, 60%, 1);
+     --comp-chart-01-point: hsla(170, 50%, 40%, 1);
+     --comp-chart-02: hsla(209, 57%, 41%, 1);
+     --comp-chart-02-sub: hsla(208, 70%, 67%, 1);
+     --comp-chart-02-point: hsla(208, 100%, 46%, 1);
+     --comp-chart-03: hsla(100, 50%, 40%, 1);
+     --comp-chart-03-sub: hsla(90, 50%, 60%, 1);
+     --comp-chart-03-point: hsla(90, 60%, 70%, 1);
+     --comp-chart-04: hsla(20, 70%, 50%, 1);
+     --comp-chart-04-sub: hsla(40, 90%, 60%, 1);
+     --comp-chart-04-point: hsla(32, 84%, 49%, 1);
+}
+
+/* 컴포넌트 - 버튼 */
+.bw_btn {
+     /* 크기 */
+     --btn-width-default: 100px;
+     --btn-height-default: 38px;
+     /* 트랜지션 */
+     --btn-transition: background-color 0.1s ease-in;
+     /* 폰트 */
+     --btn-font-s: var(--font-body-s);
+     --btn-font-m: var(--font-body-m);
+     --btn-font-lg: var(--font-body-lg);
+     --btn-font-exlg: var(--font-title-lg);
+     /* 컬러 */
+     --btn-brand: var(--brand-500);
+     --btn-brand-hover: var(--brand-600);
+     --btn-brand-active: var(--brand-500);
+     --btn-brand-toggle: var(--brand-500);
+     --btn-contrast: var(--white);
+     --btn-contrast-hover: var(--brand-grey-900);
+     --btn-contrast-active: var(--brand-grey-800);
+     --btn-contrast-toggle: var(--brand-grey-900);
+     --btn-text: var(--blue-dark);
+     --btn-common-disabled: hsl(209, 10%, 80%);
+     --btn-common-disabled-light: var(--brand-grey-900);
+     --btn-border: hsla(255, 255, 255, 0.5);
+}
+
+
+/* 폼 태그 */
+.bw_form {
+     --form-contrast: var(--white);
+     --form-contrast-hover: var(--brand-grey-900);
+     --form-contrast-active: var(--brand-grey-800);
+     --form-contrast-toggle: var(--brand-grey-900);
+     --form-contrast-border: var(--comp-stroke);
+     --form-contrast-focus: var(--brand-light-500);
+     --form-common-disabled: hsl(209, 10%, 80%);
+     --form-common-disabled-light: var(--brand-grey-900);
+}

@@ -1,0 +1,92 @@
+* {
+     margin: 0;
+     padding: 0;
+}
+
+ol,
+ul {
+     list-style: none;
+     padding-inline-start: 0px;
+}
+
+blockquote,
+q {
+     quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+     content: '';
+     content: none;
+}
+
+table {
+     border-collapse: collapse;
+     border-spacing: 0;
+}
+
+div {
+     box-sizing: border-box;
+}
+
+/* input초기화 */
+input {
+     background: initial;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+     display: none;
+}
+
+input[type='text' i] {
+     color: var(--comp-text-btow);
+     padding-block: none;
+     padding-inline: none;
+     /* 0725가람 background-color: var(--dhx-background-primary); */
+}
+
+/* input type number 에서 화살표 제거 */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     margin: 0;
+}
+
+/* 크롬 브라우저의 인풋박스 스타일 덮기 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+     transition: background-color 5000s ease-in-out 0s;
+     -webkit-transition: background-color 9999s ease-out;
+     -webkit-box-shadow: 0 0 0px 1000px #56799a inset !important;
+     -webkit-text-fill-color: #fff !important;
+     caret-color: white;
+}
+
+/* Select box 초기화 */
+select {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+}
+
+option {
+     background: none;
+     border: none;
+     padding: 12px;
+     margin: 0;
+     font: inherit;
+     color: inherit;
+     min-height: 0;
+}
+
+/* 버튼 초기화 */
+button {
+     border: 0;
+}

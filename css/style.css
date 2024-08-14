@@ -1,0 +1,300 @@
+button {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 7px;
+     white-space: nowrap;
+}
+
+button:hover {
+     transition: background-color 0.1s ease-in;
+}
+
+button:active {
+     box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+     transition: background-color 0.1s ease-in;
+}
+
+/* 기본 버튼 크기별 구분 */
+.bw_btn_small {
+     /* 가람0729 min-width: 37px; */
+     min-width: 100px;
+     padding: 4px 8px;
+     gap: 4px;
+     font-size: var(--sys-font-body-s);
+}
+
+.bw_btn_normal {
+     /* 가람0729 버튼 스타일 추가 */
+     min-width: 100px;
+     padding: 7px 16px;
+     gap: 8px;
+     font-size: var(--sys-font-body-m);
+}
+
+.bw_btn_medium {
+     /* 가람0729 min-width: 56px; */
+     min-width: 100px;
+     padding: 12px 16px;
+     gap: 8px;
+     font-size: var(--sys-font-body-m);
+}
+
+.bw_btn_large {
+     /* 가람0729 min-width: 76px; */
+     min-width: 100px;
+     padding: 16px 24px;
+     gap: 8px;
+     font-size: var(--sys-font-body-lg);
+}
+
+.bw_btn_Extarlarge {
+     min-width: 100px;
+     padding: 16px 24px;
+     font-size: var(--sys-font-body-lg);
+}
+
+/* 아이콘 버튼 크기별 구분 */
+
+.bw_btn_small_icon {
+     width: 20px;
+     height: 20px;
+     font-size: var(--sys-font-body-m);
+}
+
+/* 가람0729 버튼 크기 추가 */
+.bw_btn_normal_icon {
+     width: 34px;
+     height: 34px;
+     font-size: var(--sys-font-title-lg);
+}
+
+/*body폰트 크기에 20px이 없어서 title-lg로 대체*/
+.bw_btn_medium_icon {
+     width: 38px;
+     height: 38px;
+     font-size: var(--sys-font-title-lg);
+}
+
+.bw_btn_medium_icon button {
+     width: 38px;
+     height: 38px;
+     font-size: var(--sys-font-title-lg);
+}
+
+.bw_btn_large_icon {
+     width: 48px;
+     height: 48px;
+     font-size: var(--sys-font-title-lg);
+}
+
+.bw_btn_Extarlarge_icon {
+     width: 48px;
+     height: 48px;
+     font-size: var(--sys-font-headline-s);
+}
+
+/* 버튼 크기별 아이콘 */
+.bw_btn_small>.bw_btn_ico {
+     width: 10px;
+     height: 10px;
+}
+
+.bw_btn_medium>.bw_btn_ico,
+.bw_btn_small_icon>.bw_btn_ico,
+.bw_btn_medium_icon>.bw_btn_ico {
+     width: 14px;
+     height: 14px;
+}
+
+.bw_btn_large>.bw_btn_ico,
+.bw_btn_large_icon>.bw_btn_ico {
+     width: 16px;
+     height: 16px;
+}
+
+.bw_btn_Extarlarge>.bw_btn_ico,
+.bw_btn_Extarlarge_icon>.bw_btn_ico {
+     width: 24px;
+     height: 24px;
+}
+
+/* 스타일별 구분 */
+/*가람0801 안쓰는 스타일
+button.base {
+	color: var(--comp-text-wtow);
+	border: 1px solid var(--comp-base-border);
+	background-color: var(--comp-base);
+}
+
+button.base:hover {
+	background-color: var(--comp-base-hover);
+}
+
+button.base:active,
+button.base.on {
+	background-color: var(--comp-base-active);
+} */
+
+button.contrast {
+     color: var(--comp-text-btow);
+     background-color: var(--comp-contrast);
+     border: 1px solid var(--comp-contrast-border);
+}
+
+button.contrast:hover {
+     background-color: var(--comp-contrast-hover);
+}
+
+button.contrast:active,
+button.contrast.on {
+     background-color: var(--comp-contrast-hover);
+}
+
+button.primary {
+     color: var(--comp-text-wtow);
+     background-color: var(--comp-brand);
+     border: 1px solid var(--comp-brand-border);
+}
+
+button.primary:hover {
+     background-color: var(--comp-brand-hover);
+}
+
+button.primary:active,
+button.primary.on {
+     background-color: var(--comp-brand-active);
+}
+
+button.ghost {
+     color: var(--comp-text-wtow);
+     border: hsla(0, 0%, 0%, 0);
+     background: hsla(0, 0%, 0%, 0);
+}
+
+button.ghost:hover {
+     /* 가람0801 	background-color: var(--comp-base-hover); */
+     background-color: var(--comp-ghost-hover);
+}
+
+button.ghost:active,
+button.ghost.on {
+     /* 고스트버튼 토글 컬러 */
+     /* 가람0729 background-color: var(--comp-base-active); */
+     /* 가람0801 	background-color: var(--comp-base-hover); */
+     background-color: var(--comp-ghost-hover);
+}
+
+button.ghost-con {
+     color: var(--comp-text-btow);
+     border: rgba(0, 0, 0, 0);
+     background: rgba(0, 0, 0, 0);
+}
+
+button.ghost-con:hover {
+     background-color: var(--comp-contrast-hover);
+}
+
+button.ghost-con:active,
+button.ghost-con.on {
+     background-color: var(--comp-contrast-hover);
+}
+
+button.table-btn {
+     /*가람0802 테이블 안에 넣는 버튼 스타일 추가 - 임시 디자인 */
+     width: 100px;
+     height: 30px;
+     border: 1px solid;
+     background-color: var(--comp-contrast);
+     border-radius: 50px;
+     color: var(--primary);
+}
+
+/* ========================================================================== */
+
+/* 버튼 상태 공통 */
+.bw_btn {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 7px;
+     white-space: nowrap;
+}
+
+.bw_btn:hover,
+.bw_btn:active {
+     transition: var(--btn-transition);
+     cursor: pointer;
+}
+
+/* 기본 버튼 최소 크기 */
+.bw_btn.small,
+.bw_btn.normal,
+.bw_btn.medium,
+.bw_btn.large,
+.bw_btn.exlarge {
+     width: 100px;
+}
+
+/* 버튼 크기별 */
+.bw_btn.small {
+     gap: var(--gap-comp-s);
+     font-size: var(--btn-font-s);
+     padding: 4px 8px;
+}
+
+.bw_btn.small.ico {
+     width: 20px;
+     height: 20px;
+}
+
+.bw_btn.normal {
+     gap: var(--gap-comp-s);
+     font-size: var(--btn-font-m);
+     padding: 7px 16px;
+}
+
+.bw_btn.medium {
+     gap: var(--gap-comp-s);
+     font-size: var(--btn-font-m);
+     padding: 12px 16px;
+}
+
+.bw_btn.medium.ico {
+     width: 38px;
+     height: 38px;
+}
+
+.bw_btn.large {
+     gap: var(--gap-comp-s);
+     font-size: var(--btn-font-lg);
+     padding: 16px 24px;
+}
+
+.bw_btn.large.ico {
+     width: 48px;
+     height: 48px;
+}
+
+.bw_btn.exlarge.ico {
+     gap: var(--gap-comp-s);
+     font-size: var(--btn-font-lg);
+}
+
+
+/* 버튼 상태별 스타일 */
+.bw_btn.primary {
+     background-color: var(--btn-brand);
+     border: 1px solid var(--btn-border);
+     color: var(--white);
+}
+
+.bw_btn.primary:hover {
+     background-color: var(--btn-brand-hover);
+     border: 1px solid var(--btn-border);
+}
+
+.bw_btn.primary:active {
+     background-color: var(--btn-brand-active);
+     border: 1px solid var(--btn-border);
+}

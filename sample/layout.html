@@ -1,0 +1,93 @@
+<html lang="ko">
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+          <meta name='viewport' content='width=device-width, intial-scale=1.0'>
+          <title>레이아웃/UI가이드</title>
+          <link rel="stylesheet" href="css/reset.css">
+     </head>
+     <style>
+          body{
+               margin:0;
+               padding:0;
+          }
+          div{
+               margin:0;
+               padding:0;
+          }
+          .bw_main{
+               width: 100%;
+               height: 100vh;
+          }
+
+          .bw_header{
+               width: 100%;
+               height: 50px;
+               background-color: grey;
+          }
+
+          .bw_header .bw_header_info{
+               width: 288px;
+               display: flex;
+               background-color: #e0e0e0;
+               height: 100%;
+          }
+
+          .bw_content{
+               width: 100%;
+               height: calc(100vh - 50px);
+               background-color: green;
+               display: flex;
+          }
+
+          .bw_content .sidebar{
+               width: 288px;
+               height: 100%;
+               background-color: pink;
+          }
+
+          .bw_content .page{
+               width: calc(100% - 288px);
+               height: 100%;
+               background-color: lightblue;
+          }
+
+          .bw_content .page .info{
+               height: 38px;
+               background-color: salmon;
+               padding: 4px 24px;
+          }
+
+          .bw_content .page .detail{
+               padding: 24px 40px;
+          }
+
+          .bw_content .page, .bw_content .page .info{
+               border-radius: 20px 0 0 0;
+          }
+          
+     </style>
+     <body>
+          <div class="bw_main">
+               <div class="bw_header">
+                    <div class="bw_header_info">
+                         <button id="sideBar"></button>
+                         <div class="bw_logo"></div>
+                    </div>
+               </div>
+               <div class="bw_content">
+                    <div class="sidebar">
+                         사이드바
+                    </div>
+                    <div class="page">
+                         <div class="info">
+                              사이트 경로
+                         </div>
+                         <div class="detail">
+                              내용
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </body>
+</html>
