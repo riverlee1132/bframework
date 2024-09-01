@@ -34,7 +34,6 @@
      --font-display-lg: 40px;
      --font-display-exlg: 44px;
 
-
      /* 그림자 */
      --shadow-tab: 0px -7px 8px -4px rgba(0, 0, 0, 0.1);
      --shadow-window: 0px 16px 24px 2px rgba(0, 0, 0, 0.1);
@@ -48,49 +47,53 @@
      --gap-comp-m: 8px;
      --gap-comp-lg: 12px;
 
-     /* 팔레트 */
+     /* value-palette */
      --black: var(--brand-100);
      --white: #ffffff;
-     --red-light: hsl(0, 70%, 70%);
      --red: hsl(0, 60%, 57%);
-     --red-dark: hsl(0, 70%, 37%);
-     --orange-light: hsl(25, 70%, 70%);
      --orange: hsl(25, 66%, 57%);
-     --orange-dark: hsl(25, 70%, 47%);
-     --yellow-light: hsl(50, 70%, 70%);
      --yellow: hsl(50, 90%, 47%);
-     --yellow-dark: hsl(50, 70%, 46%);
-     --green-light: hsl(144, 70%, 70%);
      --green: hsl(144, 60%, 48%);
-     --green-dark: hsl(144, 70%, 38%);
-     --blue-light: hsl(220, 70%, 70%);
      --blue: hsl(220, 50%, 60%);
-     --blue-dark: hsl(220, 70%, 40%);
-     --purple-light: hsl(260, 70%, 70%);
      --purple: hsl(260, 40%, 60%);
-     --purple-dark: hsl(260, 70%, 30%);
 
-     /* 브랜드 hsl */
+     /* value-브랜드 hsl */
      --h: 210;
      --s-grey: 10%;
      --s: 30%;
      --s-light: 40%;
      --brand: hsla(var(--h), var(--s), 40%, 1);
 
-     /* brand-grey 100~980 */
-     --brand-grey-980: hsl(var(--h), var(--s-grey), 98%);
-     --brand-grey-950: hsl(var(--h), var(--s-grey), 95%);
-     --brand-grey-900: hsl(var(--h), var(--s-grey), 90%);
-     --brand-grey-800: hsl(var(--h), var(--s-grey), 80%);
-     --brand-grey-700: hsl(var(--h), var(--s-grey), 70%);
-     --brand-grey-600: hsl(var(--h), var(--s-grey), 60%);
-     --brand-grey-500: hsl(var(--h), var(--s-grey), 50%);
-     --brand-grey-400: hsl(var(--h), var(--s-grey), 40%);
-     --brand-grey-300: hsl(var(--h), var(--s-grey), 30%);
-     --brand-grey-200: hsl(var(--h), var(--s-grey), 20%);
-     --brand-grey-100: hsl(var(--h), var(--s-grey), 10%);
+     /* palette-light */
+     --red-light: hsl(0, 70%, 70%);
+     --orange-light: hsl(25, 70%, 70%);
+     --yellow-light: hsl(50, 70%, 70%);
+     --green-light: hsl(144, 70%, 70%);
+     --blue-light: hsl(220, 70%, 70%);
+     --purple-light: hsl(260, 70%, 70%);
 
-     /* brand 50~950 */
+     /* palette-dark */
+     --red-dark: hsl(0, 70%, 37%);
+     --orange-dark: hsl(25, 70%, 47%);
+     --yellow-dark: hsl(50, 70%, 46%);
+     --green-dark: hsl(144, 70%, 38%);
+     --blue-dark: hsl(220, 70%, 40%);
+     --purple-dark: hsl(260, 70%, 30%);
+
+     /* brand-light */
+     --brand-light-980: hsl(var(--h), var(--s-light), 98%);
+     --brand-light-900: hsl(var(--h), var(--s-light), 90%);
+     --brand-light-800: hsl(var(--h), var(--s-light), 85%);
+     --brand-light-700: hsl(var(--h), var(--s-light), 70%);
+     --brand-light-600: hsl(var(--h), var(--s-light), 60%);
+     --brand-light-500: hsl(var(--h), var(--s-light), 50%);
+     --brand-light-400: hsl(var(--h), var(--s-light), 40%);
+     --brand-light-300: hsl(var(--h), var(--s-light), 30%);
+     --brand-light-200: hsl(var(--h), var(--s-light), 20%);
+     --brand-light-100: hsl(var(--h), var(--s-light), 10%);
+     --brand-light-50: hsl(var(--h), var(--s-light), 5%);
+
+     /* brand */
      --brand-950: hsl(var(--h), var(--s), 95%);
      --brand-900: hsl(var(--h), var(--s), 90%);
      --brand-800: hsl(var(--h), var(--s), 80%);
@@ -103,18 +106,18 @@
      --brand-100: hsl(var(--h), var(--s), 10%);
      --brand-50: hsl(var(--h), var(--s), 5%);
 
-     /* brand-light 300~980 */
-     --brand-light-980: hsl(var(--h), var(--s-light), 98%);
-     --brand-light-900: hsl(var(--h), var(--s-light), 90%);
-     --brand-light-800: hsl(var(--h), var(--s-light), 85%);
-     --brand-light-700: hsl(var(--h), var(--s-light), 70%);
-     --brand-light-600: hsl(var(--h), var(--s-light), 60%);
-     --brand-light-500: hsl(var(--h), var(--s-light), 50%);
-     --brand-light-400: hsl(var(--h), var(--s-light), 40%);
-     --brand-light-300: hsl(var(--h), var(--s-light), 30%);
-     --brand-light-200: hsl(var(--h), var(--s-light), 20%);
-     --brand-light-100: hsl(var(--h), var(--s-light), 10%);
-     --brand-light-50: hsl(var(--h), var(--s-light), 5%);
+     /* brand-grey */
+     --brand-grey-980: hsl(var(--h), var(--s-grey), 98%);
+     --brand-grey-950: hsl(var(--h), var(--s-grey), 95%);
+     --brand-grey-900: hsl(var(--h), var(--s-grey), 90%);
+     --brand-grey-800: hsl(var(--h), var(--s-grey), 80%);
+     --brand-grey-700: hsl(var(--h), var(--s-grey), 70%);
+     --brand-grey-600: hsl(var(--h), var(--s-grey), 60%);
+     --brand-grey-500: hsl(var(--h), var(--s-grey), 50%);
+     --brand-grey-400: hsl(var(--h), var(--s-grey), 40%);
+     --brand-grey-300: hsl(var(--h), var(--s-grey), 30%);
+     --brand-grey-200: hsl(var(--h), var(--s-grey), 20%);
+     --brand-grey-100: hsl(var(--h), var(--s-grey), 10%);
 }
 
 /* 라이트 모드 */
